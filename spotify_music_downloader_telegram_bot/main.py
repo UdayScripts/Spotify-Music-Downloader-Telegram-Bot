@@ -4,6 +4,7 @@ from settings import BASE_DIR, DATABASE_PATH, API_TOKEN, SPOTIFY_CLIENT_ID, SPOT
 
 from spotdl import Spotdl, DownloaderOptions, Song
 from asgiref.sync import sync_to_async
+from aiogram.types import InputFile
 from pathlib import Path
 import aiosqlite
 import asyncio
@@ -20,6 +21,9 @@ loop: asyncio.AbstractEventLoop = asyncio.get_event_loop()
 
 bot = Bot(token=API_TOKEN, loop=loop)
 dispatcher = Dispatcher(bot=bot)
+photo_path = "https://i.postimg.cc/C55Rr5kn/lzirgmkxxqm21.png"
+
+
 
 spotdl = Spotdl(
 	client_id=SPOTIFY_CLIENT_ID,
