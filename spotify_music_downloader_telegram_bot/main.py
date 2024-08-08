@@ -49,6 +49,7 @@ async def send_welcome_message(message: types.Message) -> None:
 			Hello, @{message.from_user.username}!
 			I am a Telegram Bot for downloading music from Spotify.
 			Send me a link to a Spotify track or album and I'll send you that track or album.
+   			Bot By @UdayScripts
 		"""
 
 	sent_message: types.Message = await bot.send_message(chat_id=message.chat.id, text=message_text.replace('\t', ''))
